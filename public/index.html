@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form with Cloudinary Video Upload</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>Submit Your Details</h1>
+    <form id="uploadForm" action="/submit-form" method="POST" enctype="multipart/form-data">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" required></textarea>
+
+      <label for="photo">Upload Photo:</label>
+      <input type="file" id="photo" name="photo" accept="image/*" multiple>
+
+      <label for="video">Upload Video:</label>
+      <input type="file" id="video" name="video" accept="video/*" multiple>
+
+      <button type="submit">Submit</button>
+      <p id="statusMessage"></p>
+    </form>
+  </div>
+  
+ 
+</body>
+</html>
